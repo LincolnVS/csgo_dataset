@@ -4,14 +4,12 @@
 [![made-with-python](https://img.shields.io/pypi/pyversions/webdriver-manager?logo=python&logoColor=white&style=flat-square)]() 
 
 ## About
----
 [None]
 
 ## Context & Environment
----
 The program was developed and tested on WSL 2. The same bash commands should work on a machine running a unix-based OS (e.g., Ubuntu).
 
-#### **Installation**
+### **Installation**
 
 It is recommended to use python 3.7 and a virtual environment (e.g., virtualenv, venv, and conda). To install the required packages, use the following command:
 
@@ -20,5 +18,4 @@ $ pip install -r requeriments.txt
 ```
 
 ## Usage
----
 [None]
