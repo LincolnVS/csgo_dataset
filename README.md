@@ -28,12 +28,12 @@ usage: scraping.py [-h] [--pages PAGES] [--save-type {csv,json}][--scrap-type {s
 CSGO Web Scraping Options
 
 optional arguments:
-  -h, --help                            show this help message and exit
-  --pages PAGES, --p                    number of pages to scrap (0 == automatic)
-  --s {csv,json}, --s {csv,json}        save type (csv or json)
-  --t {simple,deep}, --t {simple,deep}  scrap type
-  --o OUTPUT, --o OUTPUT                define output file name
-  --nopd, --nopd                        do not processes the data
-  --nopb, --nopb                        do not show progress bar
+  -h, --help                       show this help message and exit
+  --pages PAGES, --p               number of pages to scrap (0 == automatic)
+  --save-type {csv,json}, --s      save type (csv or json)
+  --scrap-type {simple,deep}, --t  scrap type
+  --output OUTPUT, --o             define output file name
+  --no-process-data, --nopd        do not processes the data
+  --no-progress-bar, --nopb        do not show progress bar
 
 ```
