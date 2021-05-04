@@ -18,4 +18,22 @@ $ pip install -r requeriments.txt
 ```
 
 ## Usage
-[None]
+
+In case you need help with the parameters, just run the command below:
+
+```console
+$ python scraping.py -h
+usage: scraping.py [-h] [--pages PAGES] [--save-type {csv,json}][--scrap-type {simple,deep}] [--output OUTPUT] [--no-process-data] [--no-progress-bar]
+
+CSGO Web Scraping Options
+
+optional arguments:
+  -h, --help                            show this help message and exit
+  --pages PAGES, --p                    number of pages to scrap (0 == automatic)
+  --s {csv,json}, --s {csv,json}        save type (csv or json)
+  --t {simple,deep}, --t {simple,deep}  scrap type
+  --o OUTPUT, --o OUTPUT                define output file name
+  --nopd, --nopd                        do not processes the data
+  --nopb, --nopb                        do not show progress bar
+
+```
