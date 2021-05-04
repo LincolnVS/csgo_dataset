@@ -11,11 +11,11 @@ import pandas as pd
 parser = argparse.ArgumentParser(description='CSGO Web Scraping Options')
 parser.add_argument('--pages','--p', default=0, type=int, help='number of pages to scrap (0 == automatic)')
 parser.add_argument('--save-type','--s', default='csv', type=str, choices=['csv', 'json'], help='save type (csv or json)')
-parser.add_argument('--scrap-type','--t', default='simple', type=str, choices=['simple', 'deep'], help='scrap type')
+parser.add_argument('--depth','--d', default='simple', type=str, choices=['simple', 'deep'], help='scraping depth')
 parser.add_argument('--output','--o', default='./csgo_dataset', type=str, help='define output file name')
 
-parser.add_argument('--no-process-data','--nopd', default=False, action="store_true", help='do not processes the data')
-parser.add_argument("--no-progress-bar",'--nopb', default=False, action="store_true", help="do not show progress bar")
+parser.add_argument('--no-process-data','--nopd', default=False, action="store_true", help="don't processes the data")
+parser.add_argument("--no-progress-bar",'--nopb', default=False, action="store_true", help="don't show progress bar")
 
 args = parser.parse_args()
 
@@ -87,7 +87,7 @@ def write_file(df):
             json.dump(df.to_dict(orient="records"),json_file, indent=4)
 
 def process_results(data):
-    if args.scrap_type == 'simple':
+    if args.depth == 'simple':
         ## Tratamento
         #Define Match_ID
         data['match_id'] = data['link'].str.replace('https://www.hltv.org/matches/','',regex=False).str.replace('(/)[a-z0-9]+.*','', regex=True)
