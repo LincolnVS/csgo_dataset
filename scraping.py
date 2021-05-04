@@ -9,13 +9,13 @@ import pandas as pd
 
 ## Parse settings
 parser = argparse.ArgumentParser(description='CSGO Web Scraping Options')
-parser.add_argument('--pages','--p', default=0, type=int, help='number of pages to scrap (0 == automatic)')
-parser.add_argument('--save-type','--s', default='csv', type=str, choices=['csv', 'json'], help='save type (csv or json)')
-parser.add_argument('--depth','--d', default='simple', type=str, choices=['simple', 'deep'], help='scraping depth')
-parser.add_argument('--output','--o', default='./csgo_dataset', type=str, help='define output file name')
+parser.add_argument('--p','--pages', default=0, type=int, help='number of pages to scrap (0 == automatic)')
+parser.add_argument('--s','--save-type', default='csv', type=str, choices=['csv', 'json'], help='save type (csv or json)')
+parser.add_argument('--d','--depth', default='simple', type=str, choices=['simple', 'deep'], help='scraping depth')
+parser.add_argument('--o','--output', default='./csgo_dataset', type=str, help='define output file name')
 
-parser.add_argument('--no-process-data','--nopd', default=False, action="store_true", help="don't processes the data")
-parser.add_argument("--no-progress-bar",'--nopb', default=False, action="store_true", help="don't show progress bar")
+parser.add_argument('--nopd','--no-process-data', default=False, action="store_true", help="don't processes the data")
+parser.add_argument("--nopb",'--no-progress-bar', default=False, action="store_true", help="don't show progress bar")
 
 args = parser.parse_args()
 
